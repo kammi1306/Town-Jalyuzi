@@ -266,6 +266,71 @@ body {
   }
 
   
+
+
+
+  .order-section {
+    background: #111;
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+  }
+  
+  .order-box {
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 12px;
+    max-width: 420px;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  }
+  
+  .order-box h2 {
+    margin-bottom: 20px;
+    color: #064d1c;
+    text-align: center;
+  }
+  
+  .order-box form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .order-box input,
+  .order-box select,
+  .order-box textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+  }
+  
+  .order-box textarea {
+    resize: vertical;
+    min-height: 80px;
+  }
+  
+  .order-box button {
+    background: #064d1c;
+    color: #fff;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .order-box button:hover {
+    background: #086d2d;
+  }
+  
+
+  
+
+
+
   .scale {
     display: none;
     position: fixed;
