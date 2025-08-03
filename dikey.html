@@ -68,6 +68,35 @@
     <!-- Добавьте здесь другие материалы по образцу -->
   </section>
 
+
+  <section id="order-form" class="order-section">
+    <div class="order-box">
+      <h2>Оставьте заявку</h2>
+      <form>
+        <input type="text" placeholder="Ваше имя" required>
+        <input type="tel" id="phone" placeholder="+998 (__) ___-__-__" required>
+        <label class="custom-file-upload">
+          <input type="file" name="photo" id="photo" accept="image/*" multiple>
+          <div id="photo-status" style="margin-top: 8px; font-size: 14px; color: #555;"></div>
+        </label>
+        
+  
+        
+        <label for="type">Тип жалюзи:</label>
+        <select id="type" required>
+          <option>Плиссе</option>
+          <option>Дикей</option>
+          <option>Комбо</option>
+        </select>
+  
+        <label for="size">Размер жалюзи:</label>
+        <textarea id="size" placeholder="Напишите пожалуйста ваши размеры в столбик..." required></textarea>
+  
+        <button type="submit">Отправить</button>
+      </form>
+    </div>
+  </section>
+  
   <!-- Модальное окно для увеличения -->
   <div id="modal" class="modal" onclick="closeModal()">
     <span class="close">&times;</span>

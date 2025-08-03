@@ -263,7 +263,9 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
   e.preventDefault();
   
   const name = this.name.value;
-  const phone = this.phone.value;
+  const rawPhone = this.phone.value.replace(/[^\d]/g, ''); // Удаляем всё кроме цифр
+  const phone = `+${rawPhone}`; // Добавляем код страны (если он не вводится вручную)
+  
   const message = this.message.value;
   const type = this.type.value;
  
@@ -442,7 +444,7 @@ document.querySelector("form").addEventListener("submit", function (e) {
   e.preventDefault();
 
   const name = document.querySelector('input[type="text"]').value;
-  const phone = document.getElementById("phone").value;
+  const phone = document.getElementById("phone").value.replace(/[^\d]/g, '');  // Убираем все ненужные символы
   const type = document.getElementById("type").value;
   const size = document.getElementById("size").value;
   const photoInput = document.getElementById("photo");
@@ -464,7 +466,9 @@ photoInput.addEventListener("change", function () {
   const token = "7838735275:AAHVGzV4X5LsYUQ01yx3Z-OWu0f17eRkCjA";
   const chat_id = "5675827541";
 
-  const message = `*Новая заявка:*\n\n👤 Имя: ${name}\n📞 Телефон: ${phone}\n🪟 Тип жалюзи: ${type}\n📐 Размеры:\n${size}`;
+  const phoneNumberForLink = `tel:+${phone}`;
+
+const message = `🆕 *Новая заявка:*\n\n👤 Имя: ${name}\n📞 Телефон: ${phoneNumberForLink}"\n🪟 Тип жалюзи: ${type}\n📐 Размеры:\n${size}`;
 
   if (photoFiles.length > 0) {
     const formData = new FormData();
